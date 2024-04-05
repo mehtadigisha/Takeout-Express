@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% block content %}
+<br>
+<br>
+<div>
+    <div lg="6" md="6">
+        <img src='media\food\images\hometakeoutimage.jpeg' alt="hero-img" style="float: right;" height="370" width="370" />
+      
+    <h5 class="mb-3">Easy way to make an order</h5>
+    <h1 class="mb-4">
+      <span style="color: orangered;">HUNGRY OR LAZY?</span> 
+      <br /> Just want food at<br/>
+      <span style="color: orangered;"> your door</span>
+    </h1>
+    <p>
+    Helping you enjoy comfortable and healthy food anywhere and anytime on the go 
+    <br>
+    Discover the best food
+    </p>
+    <div class="d-flex align-items-center gap-5 mt-4">
+        <a href="{% url 'menu' %}"><button class="btn btn-danger">Order</button></a>
+      </button>
+    </div>
+    <div class="d-flex align-items-center gap-5 mt-3 ">
+      <p class=" d-flex align-items-center gap-2 ">
+        No shipping charge
+        <br>
+        100% secure checkout
+      </p>
+    </div>
+      </div>
+  </div>
+
+<div lg="12" class="text-center" lg="12" class="text-center">
+  <h5 class="mb-4">What we serve</h5>
+  <h2>Just sit back at home</h2>
+  <h2>
+    we will <span style="color: orangered;">take care</span>
+  </h2>
+  <p class="mb-1 mt-4">
+    Away from Home?
+    Missing that mummy wala kana?
+  </p>
+  <p >
+    Then What for waiting Just Order and enjoy ghare vala Kana
+  </p>
+  <br><br>
+  <div>
+    <h2 style="font-weight: bold;">Inspiration for your first order</h2>
+    <a href="{% url 'menu' %}">
+        <table align="center">
+            <tr>
+                <td><img src="media\food\images\dal_makhani.jpg" alt="sry" height="250" width="250"></td>
+                <td><img src="media\food\images\date-and-walnut-balls_nAPqyOq.png" alt="sry" height="250" width="250"></td>
+                <td><img src="media\food\images\pavbhaji.png" alt="sry" height="250" width="250"></td>
+                <td><img src="media\food\images\cholepuri.jpg" alt="sry" height="250" width="250"></td>
+            </tr>
+            <tr>
+                <td><img src="media\food\images\Butter_Chicken.png" alt="sry" height="250" width="250"></td>
+                <td><img src="media\food\images\turkey-carrot-mushroom-dumplings.jpg" alt="sry" height="250" width="250"></td>
+                <td><img src="media\food\images\chickennuggets.jpg" alt="sry" height="250" width="250"></td>
+                <td><img src="media\food\images\frenchfries.png" alt="sry" height="250" width="250"></td>
+            </tr>
+        </table>
+    </a>
+  </div>
+  <br><br>
+  <div lg="6" md="6">
+    <h2 class="mb-4">
+      Why <span style="color: orangered;">TakeOut Express?</span>
+    </h2>
+    <pre style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size: medium;">
+    With our app, you never have to settle for unhealthy, expensive takeaway food again. 
+    From spicy noodles to fresh salads, we will deliver anywhere in your city. 
+    Get tasty meals in just 30 minutes. Its simple. 
+    We make it easy for you to make smart business decisions fast. 
+    Whether you have a busy schedule or just want enjoy home-cooked food,
+
+    - Fresh and tasty foods
+    - Quality support
+    - Order from any location
+    </pre>
+  </div>
+
+
+
+{% endblock content %}
