@@ -1,0 +1,41 @@
+{% extends 'base.html' %} 
+{% block content %}
+<div>
+  <h5 style="text-align: center; line-height: 250%;">ITEM(S) ADDED</h5><br>
+  <table border="1 solid black" style="width:100%">
+    <tr>
+      <th>Product</th>
+      <th>Price</th>
+      <th>Quantity</th>
+      <th>Total</th>
+      <th>Actions</th>
+    </tr>
+    {% for cart_item in cart_items %}
+        <tr>
+          <td>{{ cart_item.product.item }}</td>
+          <td>Rs{{ cart_item.product.price }}</td>
+          <td>{{ cart_item.quantity }}</td>
+          <td>Rs{{ cart_item.total}}</td>
+         <td>
+            <a href="{% url 'delete_from_cart' cart_item.id %}" class="btn btn-primary" onclick="ondel()">Delete</a>  
+          </td>
+        </tr>
+    {% endfor %}
+  </table>
+  <br>
+  <p><h5 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Total Price: {{ total }}</h5></p>
+  <br>
+  <a href="{% url 'menu' %}" class="btn btn-primary">Continue Shopping</a>
+  <br><br>
+  <a href="{% url 'order' %}" class="btn btn-primary">Checkout</a>
+  <br><br>
+</div>
+<script>
+  function ondel(){
+    alert('Item is deleted')
+  }
+  function onadd(){
+    alert('Item is Added')
+  }
+</script>
+{% endblock content %}

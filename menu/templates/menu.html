@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block content %}
+     <form action="">
+        <div class="mb-3">
+          <label class="form-label">Looking for: </label>
+          <input type="text" name="searchMenu" class="form-control" />
+        </div>
+        <button type="submit" class="btn btn-primary">
+          Search
+        </button>
+      </form>
+      <p>Searching for: {{ searchTerm }}</p>
+      <div class="row row-cols-1 row-cols-md-5 g-4">
+        {% for menu in menu %}
+        <div class="col">
+          <div class="card">
+            <img class="card-img-top" src="{{ menu.image.url }}" />
+            <div class="card-body">
+                <a href="{% url 'detail' menu.id %}">
+                    <h6 class="card-title">{{ menu.item }}</h6>
+                  </a>
+              <p class="card-text">Rs : {{ menu.price }}/-</p>
+              <a href="{% url 'add_to_cart' menu.id %}" class="btn btn-primary" onclick="onsbt()">
+                Add to cart
+              </a>
+              <br/><br>
+              <a href="{% url 'view_cart' %}" class="btn btn-primary">
+                View cart
+              </a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      <script>
+        function onsbt(){
+          alert('Item is added')
+        }
+      </script>
+{% endblock content %}
