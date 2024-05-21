@@ -60,10 +60,10 @@ Takeout Express is a food delivery application built with Django. It allows user
         python manage.py migrate
         ```
 
-  - **Create a superuser**:
-
+    - **Create a superuser**:
+  
         ```bash
-        python manage.py createsuperuser
+          python manage.py migrate
         ```
 
 7. **Run the development server**: Start the Django development server to test the application.
